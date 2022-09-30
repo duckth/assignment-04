@@ -10,6 +10,8 @@ public class WorkItem
 
     public User? AssignedTo { get; set; }
 
+    public string? Description { get; set; }
+
     public State State { get; set; }
 
     public ICollection<Tag> Tags { get; set; }
@@ -19,4 +21,8 @@ public class WorkItem
         Title = title;
         Tags = new HashSet<Tag>();
     }
+
+    public DateTime Created { get; set; }
+
+    public DateTime StateUpdated { get; set; }
 }
